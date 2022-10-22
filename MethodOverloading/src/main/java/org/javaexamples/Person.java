@@ -56,6 +56,8 @@ public class Person {
         this.age = age;
     }
 
+    // Method toString() overloaded
+    // You override the parent class (super()) toString() method
     @Override
     public String toString() {
         return "Person{" +

@@ -18,9 +18,13 @@ public class Main {
         int result = sum(12, 45);
         System.out.println("Result simple sum(): " + result);
 
-        // Using complex version of sum() method
+        // Using complex version of sum() method (integers)
         result = sum(12, 45, 32, 6, 82, 4);
-        System.out.println("Result complex sum(): " + result);
+        System.out.println("Result complex sum() with integers: " + result);
+
+        // Using complex version of sum() method (doubles)
+        double dResult = sum(3.14, 21.67, 51.3, 16.93, 99.45, 53.90);
+        System.out.println("Result complex sum() with doubles: " + dResult);
     }
 
     // Simple sum() method, using only two values
@@ -29,9 +33,19 @@ public class Main {
     }
 
     // Complex sum() method
-    // values is a list of multple values
+    // values is a list of multple values (integers)
     public static int sum (int... values) {
         int result = 0;
+        for (int i=0; i<values.length; i++) {
+            result += values[i];
+        }
+        return result;
+    }
+
+    // Complex sum() method
+    // values is a list of multple values (doubles)
+    public static double sum (double... values) {
+        double result = 0;
         for (int i=0; i<values.length; i++) {
             result += values[i];
         }
